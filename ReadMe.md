@@ -8,9 +8,15 @@ However, we wonder if you could take these two images and be able to both interp
 and extrapolate between these two images.
 An example is shown below.
 
-![StereoCard](./images/000206.jpg)
+<div margin="auto" style="text-align:center">
+<img width="50%" src="./images/000206.jpg" />
+ </div>
+<span> <b>Original StereoCard:</b> The Pima Indian of Arizona</span>
 
-![Generated Video](./images/full_000206.gif)
+<div width="200px">
+<img width="30%" src="./images/full_000206.gif" />
+ </div>
+ <span><b>Generated Video</b></span>
 
 ## How does it work?
 
