@@ -8,6 +8,10 @@ However, we wonder if you could take these two images and be able to both interp
 and extrapolate between these two images.
 An example is shown below.
 
+![StereoCard](./images/000206.jpg)
+
+![Generated Video](./images/full_000206.gif)
+
 ## How does it work?
 
 The method proceeds as follows:
@@ -20,7 +24,9 @@ extrapolating outside the perimeter. The projection code is based on that of
 3. Then finally fill in the holes using a generative model based on the [Boundless model](https://arxiv.org/abs/1908.07007). This is done for each pair separately. The code is in `./train_boundless.py`.
 
 ## Data download
-To download and preprocess the data, look at `./data/nyplstereo.py`. This does the following:
+To download and preprocess the data, look at `./data/nyplstereo.py`. (But you first need
+to obtain a token from the New York Public Library API and fill in the string marked XXXXXXX.)
+This does the following:
 - Downloads the high resolution stereo cards 
 - Downloads the title of the stereo cards
 - Splits the stereo cards into left and right

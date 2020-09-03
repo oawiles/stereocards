@@ -95,7 +95,7 @@ def download_text():
             print("Obtaining collection...")
             url = 'http://api.repo.nypl.org/api/v1/collections'
             base_name = os.environ['BASE_PATH'] + '/nypl_large/'
-            auth = 'Token token=ab2y0h7wu11hmj2z'
+            auth = 'Token token=XXXXXXXX'
             call = requests.get(url, headers={'Authorization': auth})
 
             collections = call.json()['nyplAPI']['response']['collection']
