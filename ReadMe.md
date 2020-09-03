@@ -29,6 +29,8 @@ extrapolating outside the perimeter. The projection code is based on that of
 [SynSin](http://www.robots.ox.ac.uk/~ow/synsin.html). This happens in `./generate_video.py`.
 3. Then finally fill in the holes using a generative model based on the [Boundless model](https://arxiv.org/abs/1908.07007). This is done for each pair separately. The code is in `./train_boundless.py`.
 
+To run the code on a single sample, look at `./single_sample.sh`.
+
 ## Data download
 To download and preprocess the data, look at `./data/nyplstereo.py`. (But you first need
 to obtain a token from the New York Public Library API and fill in the string marked XXXXXXX.)
