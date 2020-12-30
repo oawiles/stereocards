@@ -20,6 +20,10 @@ An example is shown below.
 
 ## How does it work?
 
+We assume that the stereocard has been pre-processed into left and right images. 
+This can either be done automatically (as shown below in the Data Download section) or manually.
+The quality of the division here has a big impact on the downstream results.
+
 The method proceeds as follows:
 1. Figure out a dense correspondence between the pairs of the images using DTW (and 
 potentially first preprocessing by using SIFT correspondences in order to 
