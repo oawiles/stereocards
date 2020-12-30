@@ -20,10 +20,26 @@ An example is shown below.
 
 ## How does it work?
 
+### Data assumptions
 We assume that the stereocard has been pre-processed into left and right images. 
 This can either be done automatically (as shown below in the Data Download section) or manually.
 The quality of the division here has a big impact on the downstream results.
 
+
+The image pairs themselves are assumed to be arranged as follows:
+```
+- BASE_PATH
+  - imL
+    - im_0
+    - ...
+    - im_N
+  - imR
+   - im_0
+   - ...
+   - im_N
+```
+
+### Method
 The method proceeds as follows:
 1. Figure out a dense correspondence between the pairs of the images using DTW (and 
 potentially first preprocessing by using SIFT correspondences in order to 
@@ -33,7 +49,7 @@ extrapolating outside the perimeter. The projection code is based on that of
 [SynSin](http://www.robots.ox.ac.uk/~ow/synsin.html). This happens in `./generate_video.py`.
 3. Then finally fill in the holes using a generative model based on the [Boundless model](https://arxiv.org/abs/1908.07007). This is done for each pair separately. The code is in `./train_boundless.py`.
 
-To run the code on a single sample, look at `./single_sample.sh`.
+To run the code on a single sample, look at `./single_sample.sh`. This additionally shows how to run the individual steps with the right command line arguments. However, you need to update `BASE_PATH` and `im_name` in the shell script.
 
 ## Data download
 To download and preprocess the data, look at `./data/nyplstereo.py`. (But you first need
