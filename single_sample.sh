@@ -44,7 +44,7 @@ N_ITERS_T=8010
 base_file=./temp/
 model_name=./checkpoints/
 
-cp /scratch/shared/nfs1/ow/datasets/stereo/nypl_large_preprocessed/imR/$im_name.jpg $base_file/$im_name/orig-0.jpg
+cp $BASE_PATH/imR/$im_name.jpg $base_file/$im_name/orig-0.jpg
 
 python train_boundless.py --n_iters $N_ITERS_T \
                             --image $base_file/$im_name/orig-0.jpg \
